@@ -1,0 +1,4 @@
+# Exclude FOLDERS from being tracked
+.vscode/
+
+# Exclude FILES from being tracked
