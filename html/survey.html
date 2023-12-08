@@ -1,0 +1,387 @@
+<!--
+survey.html
+
+    Author      :   Helio Tejeda
+    University  :   University of California, Irvine
+    Lab         :   Modeling and Decision-Making Lab (MADLAB)
+
+Survey HTML file.
+
+This file contains all of the task survey information. This is
+conducted at the end of the experiment.
+-->
+<html>
+    <head>
+        <link rel="stylesheet" href="css/survey.css">
+        <!--
+            Custom JavaScript - Experiment Page Metadata and Functionality
+        -->
+        <script src="js/survey.js" type="module">
+        </script>
+    </head>
+    <body>
+        <!--------------------------------------------------------------------------------
+        ----------------------------------------------------------------------------------
+        |   Survey Content - Main Container                                              |
+        |       This holds all of the survey content for a given experiment              |
+        ----------------------------------------------------------------------------------
+        --------------------------------------------------------------------------------->
+        <div class="col-12 trialbox justify-content-center" id="survey-container">
+            <!--------------------------------------------
+            |   Row 1 - Difficulty Question              |
+            --------------------------------------------->
+            <div class="row" id="survey-question-container">
+                <!-- Trial Question Information (actual question) -->
+                <div class="col-12 text-center" id="survey-task-container">
+                    <!-- Update trial question here -->
+                    <h5 class="trial-task trial-question trial-information" id="survey-task">
+                        Suppose you are now given 100 questions for each of the 10 topics. We want you to estimate the percentage of questions
+                        that you would answer correctly <b>on your own</b> (without the aid of <i>ChatGPT</i>). This means that if you have
+                        absolutely no idea and are guessing for all 100 questions, your predicted score would be 25% (Guessing/Chance). However,
+                        if you are an expert and predict that you will answer all 100 questions correctly, then your score would be 100%.
+                        <br />
+                        <br />
+                        For each of the topics, what percentage of questions do you believe you would answer correctly <b>on your own</b> (without any help from <i>ChatGPT</i>)?
+                    </h5>
+                    
+                </div>
+            </div>
+            <!--------------------------------------------
+            |   Row 2 - Topic Options                    |
+            --------------------------------------------->
+            <div class="row" id="survey-likert-table-container">
+                <div class="col-12">
+                    <div class="row" id="survey-likert-legend-header-container">
+                        <div class="col-2 survey-likert-topic-header">
+                            <b>Topic</b>
+                        </div>
+                        <div class="col-10 text-center survey-likert-legend-container">
+                            <ul class='likert-legend' id="survey-likert-legend-header">
+                                <li>
+                                    <label>Guessing (Chance)</label>
+                                    <label>25%</label>
+                                </li>
+                                <li>
+                                    <label>30%</label>
+                                </li>
+                                <li>
+                                    <label>35%</label>
+                                </li>
+                                <li>
+                                    <label>40%</label>
+                                </li>
+                                <li>
+                                    <label>45%</label>
+                                </li>
+                                <li>
+                                    <label>50%</label>
+                                </li>
+                                <li>
+                                    <label>55%</label>
+                                </li>
+                                <li>
+                                    <label>60%</label>
+                                </li>
+                                <li>
+                                    <label>65%</label>
+                                </li>
+                                <li>
+                                    <label>70%</label>
+                                </li>
+                                <li>
+                                    <label>75%</label>
+                                </li>
+                                <li>
+                                    <label>80%</label>
+                                </li>
+                                <li>
+                                    <label>85%</label>
+                                </li>
+                                <li>
+                                    <label>90%</label>
+                                </li>
+                                <li>
+                                    <label>95%</label>
+                                </li>
+                                <li>
+                                    <label>All Correct</label>
+                                    <label>100%</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Topic 01 -->
+                    <div class="row survey-likert-topic-container">
+                        <div class="col-2 survey-likert-topic-header">
+                            Anatomy
+                        </div>
+                        <div class="col-10 text-center survey-likert-legend-container">
+                            <ul class='likert-topic' id="survey-topic01-likert-scale-radio-button-selection">
+                                <li><input type="radio" name="Anatomy" value="25"></li>
+                                <li><input type="radio" name="Anatomy" value="30"></li>
+                                <li><input type="radio" name="Anatomy" value="35"></li>
+                                <li><input type="radio" name="Anatomy" value="40"></li>
+                                <li><input type="radio" name="Anatomy" value="45"></li>
+                                <li><input type="radio" name="Anatomy" value="50"></li>
+                                <li><input type="radio" name="Anatomy" value="55"></li>
+                                <li><input type="radio" name="Anatomy" value="60"></li>
+                                <li><input type="radio" name="Anatomy" value="65"></li>
+                                <li><input type="radio" name="Anatomy" value="70"></li>
+                                <li><input type="radio" name="Anatomy" value="75"></li>
+                                <li><input type="radio" name="Anatomy" value="80"></li>
+                                <li><input type="radio" name="Anatomy" value="85"></li>
+                                <li><input type="radio" name="Anatomy" value="90"></li>
+                                <li><input type="radio" name="Anatomy" value="95"></li>
+                                <li><input type="radio" name="Anatomy" value="100"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Topic 02 -->
+                    <div class="row survey-likert-topic-container">
+                        <div class="col-2 survey-likert-topic-header">
+                            Global Facts
+                        </div>
+                        <div class="col-10 text-center survey-likert-legend-container">
+                            <ul class='likert-topic' id="survey-topic02-likert-scale-radio-button-selection">
+                                <li><input type="radio" name="Global Facts" value="25"></li>
+                                <li><input type="radio" name="Global Facts" value="30"></li>
+                                <li><input type="radio" name="Global Facts" value="35"></li>
+                                <li><input type="radio" name="Global Facts" value="40"></li>
+                                <li><input type="radio" name="Global Facts" value="45"></li>
+                                <li><input type="radio" name="Global Facts" value="50"></li>
+                                <li><input type="radio" name="Global Facts" value="55"></li>
+                                <li><input type="radio" name="Global Facts" value="60"></li>
+                                <li><input type="radio" name="Global Facts" value="65"></li>
+                                <li><input type="radio" name="Global Facts" value="70"></li>
+                                <li><input type="radio" name="Global Facts" value="75"></li>
+                                <li><input type="radio" name="Global Facts" value="80"></li>
+                                <li><input type="radio" name="Global Facts" value="85"></li>
+                                <li><input type="radio" name="Global Facts" value="90"></li>
+                                <li><input type="radio" name="Global Facts" value="95"></li>
+                                <li><input type="radio" name="Global Facts" value="100"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Topic 03 -->
+                    <div class="row survey-likert-topic-container">
+                        <div class="col-2 survey-likert-topic-header">
+                            High School Chemistry
+                        </div>
+                        <div class="col-10 text-center survey-likert-legend-container">
+                            <ul class='likert-topic' id="survey-topic03-likert-scale-radio-button-selection">
+                                <li><input type="radio" name="High School Chemistry" value="25"></li>
+                                <li><input type="radio" name="High School Chemistry" value="30"></li>
+                                <li><input type="radio" name="High School Chemistry" value="35"></li>
+                                <li><input type="radio" name="High School Chemistry" value="40"></li>
+                                <li><input type="radio" name="High School Chemistry" value="45"></li>
+                                <li><input type="radio" name="High School Chemistry" value="50"></li>
+                                <li><input type="radio" name="High School Chemistry" value="55"></li>
+                                <li><input type="radio" name="High School Chemistry" value="60"></li>
+                                <li><input type="radio" name="High School Chemistry" value="65"></li>
+                                <li><input type="radio" name="High School Chemistry" value="70"></li>
+                                <li><input type="radio" name="High School Chemistry" value="75"></li>
+                                <li><input type="radio" name="High School Chemistry" value="80"></li>
+                                <li><input type="radio" name="High School Chemistry" value="85"></li>
+                                <li><input type="radio" name="High School Chemistry" value="90"></li>
+                                <li><input type="radio" name="High School Chemistry" value="95"></li>
+                                <li><input type="radio" name="High School Chemistry" value="100"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Topic 04 -->
+                    <div class="row survey-likert-topic-container">
+                        <div class="col-2 survey-likert-topic-header">
+                            High School Macroeconomics
+                        </div>
+                        <div class="col-10 text-center survey-likert-legend-container">
+                            <ul class='likert-topic' id="survey-topic04-likert-scale-radio-button-selection">
+                                <li><input type="radio" name="High School Macroeconomics" value="25"></li>
+                                <li><input type="radio" name="High School Macroeconomics" value="30"></li>
+                                <li><input type="radio" name="High School Macroeconomics" value="35"></li>
+                                <li><input type="radio" name="High School Macroeconomics" value="40"></li>
+                                <li><input type="radio" name="High School Macroeconomics" value="45"></li>
+                                <li><input type="radio" name="High School Macroeconomics" value="50"></li>
+                                <li><input type="radio" name="High School Macroeconomics" value="55"></li>
+                                <li><input type="radio" name="High School Macroeconomics" value="60"></li>
+                                <li><input type="radio" name="High School Macroeconomics" value="65"></li>
+                                <li><input type="radio" name="High School Macroeconomics" value="70"></li>
+                                <li><input type="radio" name="High School Macroeconomics" value="75"></li>
+                                <li><input type="radio" name="High School Macroeconomics" value="80"></li>
+                                <li><input type="radio" name="High School Macroeconomics" value="85"></li>
+                                <li><input type="radio" name="High School Macroeconomics" value="90"></li>
+                                <li><input type="radio" name="High School Macroeconomics" value="95"></li>
+                                <li><input type="radio" name="High School Macroeconomics" value="100"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Topic 05 -->
+                    <div class="row survey-likert-topic-container">
+                        <div class="col-2 survey-likert-topic-header">
+                            High School Physics
+                        </div>
+                        <div class="col-10 text-center survey-likert-legend-container">
+                            <ul class='likert-topic' id="survey-topic05-likert-scale-radio-button-selection">
+                                <li><input type="radio" name="High School Physics" value="25"></li>
+                                <li><input type="radio" name="High School Physics" value="30"></li>
+                                <li><input type="radio" name="High School Physics" value="35"></li>
+                                <li><input type="radio" name="High School Physics" value="40"></li>
+                                <li><input type="radio" name="High School Physics" value="45"></li>
+                                <li><input type="radio" name="High School Physics" value="50"></li>
+                                <li><input type="radio" name="High School Physics" value="55"></li>
+                                <li><input type="radio" name="High School Physics" value="60"></li>
+                                <li><input type="radio" name="High School Physics" value="65"></li>
+                                <li><input type="radio" name="High School Physics" value="70"></li>
+                                <li><input type="radio" name="High School Physics" value="75"></li>
+                                <li><input type="radio" name="High School Physics" value="80"></li>
+                                <li><input type="radio" name="High School Physics" value="85"></li>
+                                <li><input type="radio" name="High School Physics" value="90"></li>
+                                <li><input type="radio" name="High School Physics" value="95"></li>
+                                <li><input type="radio" name="High School Physics" value="100"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Topic 06 -->
+                    <div class="row survey-likert-topic-container">
+                        <div class="col-2 survey-likert-topic-header">
+                            High School World History
+                        </div>
+                        <div class="col-10 text-center survey-likert-legend-container">
+                            <ul class='likert-topic' id="survey-topic06-likert-scale-radio-button-selection">
+                                <li><input type="radio" name="High School World History" value="25"></li>
+                                <li><input type="radio" name="High School World History" value="30"></li>
+                                <li><input type="radio" name="High School World History" value="35"></li>
+                                <li><input type="radio" name="High School World History" value="40"></li>
+                                <li><input type="radio" name="High School World History" value="45"></li>
+                                <li><input type="radio" name="High School World History" value="50"></li>
+                                <li><input type="radio" name="High School World History" value="55"></li>
+                                <li><input type="radio" name="High School World History" value="60"></li>
+                                <li><input type="radio" name="High School World History" value="65"></li>
+                                <li><input type="radio" name="High School World History" value="70"></li>
+                                <li><input type="radio" name="High School World History" value="75"></li>
+                                <li><input type="radio" name="High School World History" value="80"></li>
+                                <li><input type="radio" name="High School World History" value="85"></li>
+                                <li><input type="radio" name="High School World History" value="90"></li>
+                                <li><input type="radio" name="High School World History" value="95"></li>
+                                <li><input type="radio" name="High School World History" value="100"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Topic 07 -->
+                    <div class="row survey-likert-topic-container">
+                        <div class="col-2 survey-likert-topic-header">
+                            Machine Learning
+                        </div>
+                        <div class="col-10 text-center survey-likert-legend-container">
+                            <ul class='likert-topic' id="survey-topic07-likert-scale-radio-button-selection">
+                                <li><input type="radio" name="Machine Learning" value="25"></li>
+                                <li><input type="radio" name="Machine Learning" value="30"></li>
+                                <li><input type="radio" name="Machine Learning" value="35"></li>
+                                <li><input type="radio" name="Machine Learning" value="40"></li>
+                                <li><input type="radio" name="Machine Learning" value="45"></li>
+                                <li><input type="radio" name="Machine Learning" value="50"></li>
+                                <li><input type="radio" name="Machine Learning" value="55"></li>
+                                <li><input type="radio" name="Machine Learning" value="60"></li>
+                                <li><input type="radio" name="Machine Learning" value="65"></li>
+                                <li><input type="radio" name="Machine Learning" value="70"></li>
+                                <li><input type="radio" name="Machine Learning" value="75"></li>
+                                <li><input type="radio" name="Machine Learning" value="80"></li>
+                                <li><input type="radio" name="Machine Learning" value="85"></li>
+                                <li><input type="radio" name="Machine Learning" value="90"></li>
+                                <li><input type="radio" name="Machine Learning" value="95"></li>
+                                <li><input type="radio" name="Machine Learning" value="100"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Topic 08 -->
+                    <div class="row survey-likert-topic-container">
+                        <div class="col-2 survey-likert-topic-header">
+                            Phyilosophy
+                        </div>
+                        <div class="col-10 text-center survey-likert-legend-container">
+                            <ul class='likert-topic' id="survey-topic08-likert-scale-radio-button-selection">
+                                <li><input type="radio" name="Phyilosophy" value="25"></li>
+                                <li><input type="radio" name="Phyilosophy" value="30"></li>
+                                <li><input type="radio" name="Phyilosophy" value="35"></li>
+                                <li><input type="radio" name="Phyilosophy" value="40"></li>
+                                <li><input type="radio" name="Phyilosophy" value="45"></li>
+                                <li><input type="radio" name="Phyilosophy" value="50"></li>
+                                <li><input type="radio" name="Phyilosophy" value="55"></li>
+                                <li><input type="radio" name="Phyilosophy" value="60"></li>
+                                <li><input type="radio" name="Phyilosophy" value="65"></li>
+                                <li><input type="radio" name="Phyilosophy" value="70"></li>
+                                <li><input type="radio" name="Phyilosophy" value="75"></li>
+                                <li><input type="radio" name="Phyilosophy" value="80"></li>
+                                <li><input type="radio" name="Phyilosophy" value="85"></li>
+                                <li><input type="radio" name="Phyilosophy" value="90"></li>
+                                <li><input type="radio" name="Phyilosophy" value="95"></li>
+                                <li><input type="radio" name="Phyilosophy" value="100"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Topic 09 -->
+                    <div class="row survey-likert-topic-container">
+                        <div class="col-2 survey-likert-topic-header">
+                            Professional Psychology
+                        </div>
+                        <div class="col-10 text-center survey-likert-legend-container">
+                            <ul class='likert-topic' id="survey-topic09-likert-scale-radio-button-selection">
+                                <li><input type="radio" name="Professional Psychology" value="25"></li>
+                                <li><input type="radio" name="Professional Psychology" value="30"></li>
+                                <li><input type="radio" name="Professional Psychology" value="35"></li>
+                                <li><input type="radio" name="Professional Psychology" value="40"></li>
+                                <li><input type="radio" name="Professional Psychology" value="45"></li>
+                                <li><input type="radio" name="Professional Psychology" value="50"></li>
+                                <li><input type="radio" name="Professional Psychology" value="55"></li>
+                                <li><input type="radio" name="Professional Psychology" value="60"></li>
+                                <li><input type="radio" name="Professional Psychology" value="65"></li>
+                                <li><input type="radio" name="Professional Psychology" value="70"></li>
+                                <li><input type="radio" name="Professional Psychology" value="75"></li>
+                                <li><input type="radio" name="Professional Psychology" value="80"></li>
+                                <li><input type="radio" name="Professional Psychology" value="85"></li>
+                                <li><input type="radio" name="Professional Psychology" value="90"></li>
+                                <li><input type="radio" name="Professional Psychology" value="95"></li>
+                                <li><input type="radio" name="Professional Psychology" value="100"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Topic 10 -->
+                    <div class="row survey-likert-topic-container">
+                        <div class="col-2 survey-likert-topic-header">
+                            Public Relations
+                        </div>
+                        <div class="col-10 text-center survey-likert-legend-container">
+                            <ul class='likert-topic' id="survey-topic10-likert-scale-radio-button-selection">
+                                <li><input type="radio" name="Public Relations" value="25"></li>
+                                <li><input type="radio" name="Public Relations" value="30"></li>
+                                <li><input type="radio" name="Public Relations" value="35"></li>
+                                <li><input type="radio" name="Public Relations" value="40"></li>
+                                <li><input type="radio" name="Public Relations" value="45"></li>
+                                <li><input type="radio" name="Public Relations" value="50"></li>
+                                <li><input type="radio" name="Public Relations" value="55"></li>
+                                <li><input type="radio" name="Public Relations" value="60"></li>
+                                <li><input type="radio" name="Public Relations" value="65"></li>
+                                <li><input type="radio" name="Public Relations" value="70"></li>
+                                <li><input type="radio" name="Public Relations" value="75"></li>
+                                <li><input type="radio" name="Public Relations" value="80"></li>
+                                <li><input type="radio" name="Public Relations" value="85"></li>
+                                <li><input type="radio" name="Public Relations" value="90"></li>
+                                <li><input type="radio" name="Public Relations" value="95"></li>
+                                <li><input type="radio" name="Public Relations" value="100"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-------------------------------------------------
+            |   Submit/Proceed Button                         |
+            -------------------------------------------------->
+            <div class="row" id="survey-submit-button-container">
+                <div class="col-12 right-button">
+                    <button class="btn btn-primary" id="survey-complete-button" disabled>
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
