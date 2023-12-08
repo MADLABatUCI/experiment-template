@@ -1,0 +1,270 @@
+<!--
+experiment.html
+
+    Author      :   Helio Tejeda
+    University  :   University of California, Irvine
+    Lab         :   Modeling and Decision-Making Lab (MADLAB)
+
+Experiment HTML file.
+
+This file contains all of the task information for the experiment.
+-->
+<html>
+    <head>
+        <link rel="stylesheet" href="css/experiment.css">
+        <!--
+            Custom JavaScript - Experiment Page Metadata and Functionality
+        -->
+        <script src="js/experiment.js" type="module">
+        </script>
+    </head>
+    <body>
+        <div class="col-12 trialbox justify-content-center" id="mainexperiment-container-loading-page">
+            <h3 style="text-align: center">
+                Experiment Loading...
+                <br />
+                <text id="expCountdown"></text>
+            </h3>
+        </div>
+        <!--------------------------------------------------------------------------------
+        ----------------------------------------------------------------------------------
+        |   Trial Content - Main Container                                               |
+        |       This holds all of the trial content for a given task                     |
+        ----------------------------------------------------------------------------------
+        --------------------------------------------------------------------------------->
+        <div class="col-12 trialbox justify-content-center" id="mainexperiment-container" hidden="true">
+            <!--------------------------------------------
+            |   Row 1 - Trial Question                   |
+            |       Actual trial question/information    |
+            |       goes here (including topic).         |
+            --------------------------------------------->
+            <div class="row" id="task-question-container">
+                <!-- Trial Question Topic Information -->
+                <div class="col-12 text-left" id="task-question-container-topic">
+                    <h5 id="task-question-container-topic-header">
+                        <span>
+                            Topic :
+                        </span>
+                        <!-- Update trial question topic information here -->
+                        <span id="task-question-container-topic-name">
+                            Name of Topic
+                        </span>
+                        <span style="float: right">
+                            Question
+                            <span id="trialCounter">
+
+                            </span>
+                            of
+                            <span id="trialCounter-total">
+
+                            </span>
+                        </span>
+                    </h5>
+                </div>
+                <!-- Trial Question Information (actual question) -->
+                <div class="col-12 text-center" id="trial-task-container">
+                    <!-- Update trial question here -->
+                    <h5 class="trial-task trial-question trial-information" id="trial-task">
+                        Trial Question Goes Here
+                    </h5>
+                </div>
+            </div>
+            <!---------------------------------------------------
+            |   Row 2 - Trial Options and GPT Input             |
+            |       A, B, C, and D options are shown on the     |
+            |       the left panel and GPT response (AI help)   |
+            |       is shown on the right panel.                |
+            ---------------------------------------------------->
+            <div class="row" id="task-options-and-gpt-container">
+                <!-- Trial Options (A, B, C, and D) -->
+                <div class="col-12" id="task-options-container">
+                    <!-- Trial Options - Header -->
+                    <div class="row justify-content-between" id="task-options-header-container">
+                        <div class="col-12 text-center" id="task-options-header">
+                            <h4 id="task-options-header-text">
+                                Options
+                            </h4>
+                        </div>
+                    </div>
+                    <!-- Trial Options - Choices -->
+                    <div class="row justify-content-between" id="task-options-choices-container">
+                        <!-- Option A -->
+                        <div class="col-12" id="task-options-choices-container-A">
+                            <button id="participant-trial-option-A" name="patA" type="button" class="btn btn-dark participant-trial-option" disabled>
+                                <span class="float-left">
+                                    <b>A</b> :
+                                </span>
+                                <span class="text-center" id="participant-trial-option-text-A">
+                                </span>
+                            </button>
+                        </div>
+                        <!-- Option B -->
+                        <div class="col-12" id="task-options-choices-container-B">
+                            <button id="participant-trial-option-B" name="patB" type="button" class="btn btn-dark participant-trial-option" disabled>
+                                <span class="float-left">
+                                    <b>B</b> :
+                                </span>
+                                <span class="text-center" id="participant-trial-option-text-B">
+                                </span>
+                            </button>
+                        </div>
+                        <!-- Option C -->
+                        <div class="col-12" id="task-options-choices-container-C">
+                            <button id="participant-trial-option-C" name="patC" type="button" class="btn btn-dark participant-trial-option" disabled>
+                                <span class="float-left">
+                                    <b>C</b> :
+                                </span>
+                                <span class="text-center" id="participant-trial-option-text-C">
+                                </span>
+                            </button>
+                        </div>
+                        <!-- Option D -->
+                        <div class="col-12" id="task-options-choices-container-D">
+                            <button id="participant-trial-option-D" name="patD" type="button" class="btn btn-dark participant-trial-option" disabled> 
+                                <span class="float-left">
+                                    <b>D</b> :
+                                </span>
+                                <span class="text-center" id="participant-trial-option-text-D">
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-----------------------------------------------------------
+            |   Row 3 - Trial Likert Scale & Submit Button              |
+            |       Likert scale will go from 25-100 (increments of 5)  |
+            |       and will contain the submit button. The submit      |
+            |       button will not be accessable unctil a likert       |
+            |       radio button has been selected. The task is         |
+            |       completed in 2 phases:                              |
+            |                                                           |
+            |           Phase 1 -   Participant selects prob GPT is     |
+            |                       correct                             |
+            |           Phase 2 -   Participant makes their own         |
+            |                       selection with the help of GPT      |
+            ------------------------------------------------------------>
+            <div class="row" id="task-likert-scale-container">
+                <!-- Phase Completion by clicking on Submit -->
+                <div class="col-12">
+                    <!-- Question Header - Probability GPT is correct? -->
+                    <div class="row" id="task-likert-scale-header-container">
+                        <div class="col-md-12 text-center mb-1">
+                            <h4 id="task-likert-scale-header-text">
+                                Rate your confidence:
+                            </h4>
+                        </div>
+                    </div>
+                    <!-- Likert Scale -->
+                    <div class="row">
+                        <div class="col-12 text-center" id="task-likert-scale-radio-button-container">
+                            <ul class='likert' id="task-likert-scale-radio-button-selection">
+                                <li>
+                                    <label>25</label>
+                                    <input type="radio" name="likert" value="25">
+                                    <label>Guessing (Chance)</label>
+                                </li>
+                                <li>
+                                    <label>30</label>
+                                    <input type="radio" name="likert" value="30">
+                                    
+                                </li>
+                                <li>
+                                    <label>35</label>
+                                    <input type="radio" name="likert" value="35">
+                                    
+                                </li>
+                                <li>
+                                    <label>40</label>
+                                    <input type="radio" name="likert" value="40">
+                                    
+                                </li>
+                                <li>
+                                    <label>45</label>
+                                    <input type="radio" name="likert" value="45">
+                                    
+                                </li>
+                                <li>
+                                    <label>50</label>
+                                    <input type="radio" name="likert" value="50">
+                                    
+                                </li>
+                                <li>
+                                    <label>55</label>
+                                    <input type="radio" name="likert" value="55">
+                                    
+                                </li>
+                                <li>
+                                    <label>60</label>
+                                    <input type="radio" name="likert" value="60">
+                                    
+                                </li>
+                                <li>
+                                    <label>65</label>
+                                    <input type="radio" name="likert" value="65">
+                                    
+                                </li>
+                                <li>
+                                    <label>70</label>
+                                    <input type="radio" name="likert" value="70">
+                                    
+                                </li>
+                                <li>
+                                    <label>75</label>
+                                    <input type="radio" name="likert" value="75">
+                                    
+                                </li>
+                                <li>
+                                    <label>80</label>
+                                    <input type="radio" name="likert" value="80">
+                                    
+                                </li>
+                                <li>
+                                    <label>85</label>
+                                    <input type="radio" name="likert" value="85">
+                                    
+                                </li>
+                                <li>
+                                    <label>90</label>
+                                    <input type="radio" name="likert" value="90">
+                                    
+                                </li>
+                                <li>
+                                    <label>95</label>
+                                    <input type="radio" name="likert" value="95">
+                                    
+                                </li>
+                                <li>
+                                    <label>100</label>
+                                    <input type="radio" name="likert" value="100">
+                                    <label>Absolutely Certain</label>
+                                </li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--
+            **************************
+            *   Submit/Proceed Button
+            **************************
+
+            NOTE:
+                A proceed button has been included, but you
+                can (and should) modify this to your
+                experiment tasks:
+
+                    - Create multiple buttons if necessary
+                    - No button if you don't need it
+                    - Etc
+            -->
+            <div class="row" id="task-submit-button-container">
+                <div class="col-12 right-button">
+                    <button class="btn btn-primary" id="proceedMainexperiment" disabled>
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

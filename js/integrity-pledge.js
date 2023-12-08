@@ -88,7 +88,7 @@ $(document).ready(function (){
         writeRealtimeDatabase(INTEGRITY_DB_PATH, INTEGRITY_DATA);
 
         // Load Main Experiment
-        $('#task-main-content').load('html/experiment_concurrent.html');
+        $('#task-main-content').load('html/experiment.html');
     };
 
     // Integrity Pledge Checkbox
