@@ -120,7 +120,7 @@ $(document).ready(function (){
         $("#comprehension-quiz-main-content").attr("hidden", false);
 
         // Load Integrity Pledge
-        $('#comprehension-quiz-main-content').load('html/comprehension-quiz.html');
+        $('#comprehension-quiz-main-content').load('html/integrity-pledge.html');
 
         // Write to Database
         writeRealtimeDatabase(
