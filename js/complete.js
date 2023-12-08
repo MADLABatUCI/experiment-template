@@ -24,6 +24,15 @@ import {
 
 
 /******************************************************************************
+    DEBUG
+
+        For now we are in DEBUG mode. Turn off DEBUG mode in js/metadata.js.
+******************************************************************************/
+//      Turn ON/OFF Debug Mode
+var DEBUG_COMPLETE     = DEBUG;
+
+
+/******************************************************************************
     VARIABLES
 
         All metadata variables that are relevant to the survey page.
@@ -82,7 +91,12 @@ $(document).ready(function (){
         
         // The redirect URL should be back to Prolific
         if (restart) {
-            window.location.replace("https://madlabatuci.github.io/experiment-template/");
+            if (DEBUG_COMPLETE){
+                window.location.replace("https://madlabatuci.github.io/experiment-template/");
+            } else {
+                // This redirect should be updated to Prolific when you are LIVE
+                window.location.replace("https://madlabatuci.github.io/experiment-template/");
+            }
         }
     }
 
